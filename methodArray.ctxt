@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=methodArray
+comment1.params=args
+comment1.target=void\ main(java.lang.String[])
+comment2.params=i
+comment2.target=int\ getIn(int)
+comment3.params=s
+comment3.target=java.lang.String\ getIn(java.lang.String)
+numComments=4

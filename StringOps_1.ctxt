@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.target=StringOps_1
+comment1.params=input
+comment1.target=StringOps_1(java.util.Scanner)
+comment2.params=
+comment2.target=void\ compareTheArrays()
+comment3.params=
+comment3.target=void\ printTheStrings()
+comment4.params=args
+comment4.target=void\ main(java.lang.String[])
+numComments=5

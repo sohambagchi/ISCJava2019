@@ -27,25 +27,25 @@ public class q1
      */
     public int sampleMethod()
     {
-       if (score == 100) {
-grade = ’A’;
-System.out.println("Superb");
-}
-else if (score >= 90) {
-grade = ’A’;
-System.out.println("Excellent");
-}
-else if (score >= 80) {
-grade = ’B’;
-System.out.println("Very Good");
-}
-else if (score >= 70) {
-grade = ’C’;
-System.out.println("Good");
-}
-else if (score >= 60)
-grade = ’D’;
-else
-grade = ’E’;
+        if (score == 100) {
+            grade = ’A’;
+            System.out.println("Superb");
+        }
+        else if (score >= 90) {
+            grade = ’A’;
+            System.out.println("Excellent");
+        }
+        else if (score >= 80) {
+            grade = ’B’;
+            System.out.println("Very Good");
+        }
+        else if (score >= 70) {
+            grade = ’C’;
+            System.out.println("Good");
+        }
+        else if (score >= 60)
+            grade = ’D’;
+        else
+        grade = ’E’;
     }
 }

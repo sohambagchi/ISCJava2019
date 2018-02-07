@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.target=Input
+comment1.params=
+comment1.target=int\ inputInt()
+comment2.params=
+comment2.target=java.lang.String\ inputString()
+comment3.params=
+comment3.target=double\ inputDouble()
+comment4.params=
+comment4.target=char\ inputChar()
+numComments=5

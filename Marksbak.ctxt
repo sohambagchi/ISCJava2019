@@ -1,0 +1,17 @@
+#BlueJ class context
+comment0.target=Marksbak
+comment1.params=m\ n
+comment1.target=Marksbak(int,\ int)
+comment2.params=input\ rand
+comment2.target=void\ input(java.util.Scanner,\ java.util.Random)
+comment3.params=
+comment3.target=void\ calculate()
+comment4.params=
+comment4.target=void\ sort()
+comment5.params=
+comment5.target=void\ display()
+comment6.params=
+comment6.target=java.lang.String\ randomName()
+comment7.params=args
+comment7.target=void\ main(java.lang.String[])
+numComments=8

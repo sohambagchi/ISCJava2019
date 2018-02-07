@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.target=Laws
+comment1.params=
+comment1.target=Laws()
+comment2.params=v\ u\ a\ input
+comment2.target=double\ time(double,\ double,\ double,\ java.util.Scanner)
+comment3.params=v\ u\ S\ input
+comment3.target=double\ acceleration(double,\ double,\ double,\ java.util.Scanner)
+comment4.params=u\ a\ t\ input
+comment4.target=double\ displacement(double,\ double,\ double,\ java.util.Scanner)
+comment5.params=args
+comment5.target=void\ main(java.lang.String[])
+numComments=6

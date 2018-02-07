@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=ia_jan18_2
+comment1.params=args
+comment1.target=void\ main(java.lang.String[])
+comment2.params=n
+comment2.target=double\ series(double)
+comment3.params=a\ n
+comment3.target=double\ series(double,\ double)
+numComments=4

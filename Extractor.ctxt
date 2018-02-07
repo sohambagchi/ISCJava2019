@@ -1,0 +1,15 @@
+#BlueJ class context
+comment0.target=Extractor
+comment1.params=
+comment1.target=Extractor()
+comment2.params=input
+comment2.target=java.lang.String\ input(java.util.Scanner)
+comment3.params=inp\ start
+comment3.target=java.lang.String\ extractor(java.lang.String,\ int)
+comment4.params=inp\ start\ end
+comment4.target=java.lang.String\ extractor(java.lang.String,\ int,\ int)
+comment5.params=
+comment5.target=void\ display()
+comment6.params=args
+comment6.target=void\ main(java.lang.String[])
+numComments=7

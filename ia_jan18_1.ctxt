@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.target=ia_jan18_1
+comment1.params=args
+comment1.target=void\ main(java.lang.String[])
+comment2.params=a\ ch
+comment2.target=void\ num_calc(int,\ char)
+comment3.params=a\ b\ ch
+comment3.target=void\ num_calc(int,\ int,\ char)
+comment4.params=s1\ s2
+comment4.target=void\ num_calc(java.lang.String,\ java.lang.String)
+comment5.params=
+comment5.target=java.lang.String\ getIn()
+numComments=6

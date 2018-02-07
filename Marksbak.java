@@ -1,12 +1,12 @@
 import java.util.*;
-public class Marks
+public class Marksbak
 {
     int students[][];
     String sName[];
     String subject[];
     double percent[];
 
-    Marks(int m, int n)
+    Marksbak(int m, int n)
     {
         students = new int[m][n];
         sName = new String[m];
@@ -126,7 +126,7 @@ public class Marks
         int stu = input.nextInt();
         System.out.println("Please enter number of subjects - ");
         int sub = input.nextInt();
-        Marks mS = new Marks(stu, sub);
+        Marksbak mS = new Marksbak(stu, sub);
         mS.input(input, rand);
         mS.calculate();
         mS.sort();
