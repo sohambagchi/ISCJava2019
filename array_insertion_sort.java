@@ -2,7 +2,8 @@ import java.util.*;
 public class array_insertion_sort{
     public static void main(String[] args){
         Scanner input = new Scanner(System.in);
-        System.out.println("Please enter array length - "); int n = input.nextInt();
+        System.out.println("Please enter array length - "); 
+        int n = input.nextInt();
         int[] array = new int[n];
         for(int i = 0; i < array.length; i++){
             System.out.print("Please enter number - ");
@@ -27,6 +28,5 @@ public class array_insertion_sort{
         for(int t = 0; t < array.length; t++){
             System.out.print(array[t] + "\t");
         }
-        System.out.println(" ");
     }
 }
