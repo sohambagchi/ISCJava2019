@@ -1,17 +1,17 @@
 import java.util.*;
 public class RGen{
-    Random rand = new Random();
-    public int randomInt(int u, int p){
+    public static Random rand = new Random();
+    public static int randomInt(int u, int p){
         return rand.nextInt(u) + p;
     }
 
-    public char randomChar(){
+    public static char randomChar(){
         int tmp = rand.nextInt(25) + 65;
         char tMp = (char)tmp;
         return tMp;
     }
 
-    public String randomString(){
+    public static String randomString(){
         int wordLength = rand.nextInt(5) + 4;
         char worD[] = new char[wordLength];
         for(int j = 0; j < wordLength; j++){
@@ -23,26 +23,34 @@ public class RGen{
         return str;
     }
 
-    public String randomSentence(){
+    public static String randomSentence(){
         int sentenceLength = rand.nextInt(6) + 1;
-        String worDs[] = new String[sentenceLength + (sentenceLength - 1)];
-        for(int i = 0; i < sentenceLength; i=i+2){
-            int wordLength = rand.nextInt(5) + 4;
-            char worD[] = new char[wordLength];
-            for(int j = 0; j < wordLength; j++){
-                int tmp = rand.nextInt(26) + 65;
-                char tMp = (char)tmp;
-                worD[j] = tMp;
+        int potato = sentenceLength - 1;
+        int ArrayLength = sentenceLength + potato;
+        String worDs[] = new String[ArrayLength];
+        for(int i = 0; i < ArrayLength; i += 2){
+            if(i%2 == 0){
+                int wordLength = rand.nextInt(8) + 1;
+                char worD[] = new char[wordLength];
+                for(int j = 0; j < wordLength; j++){
+                    int tmp = rand.nextInt(26) + 65;
+                    char tMp = (char)tmp;
+                    worD[j] = tMp;
+                }
+                String str = String.valueOf(worD);
+                worDs[i] = str;
             }
-            String str = String.valueOf(worD);
-            worDs[i] = str;
-            if(i < sentenceLength) worDs[i+1] = " ";
+            else worDs[i] = " "; 
         }
-        String senTence = String.valueOf(worDs);
+        String senTence = " ";
+        for(int i = 0; i < worDs.length; i++){
+            if(i%2 == 0) senTence = senTence + worDs[i];
+            else senTence = senTence + " ";
+        }
         return senTence;
     }
 
-    public double randomDouble(){
+    public static double randomDouble(){
         int shift = rand.nextInt(123);
         int x = rand.nextInt(3000) + shift;
         int y = rand.nextInt(3000) + shift;
