@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.target=RGen
+comment1.params=u\ p
+comment1.target=int\ randomInt(int,\ int)
+comment2.params=
+comment2.target=char\ randomChar()
+comment3.params=
+comment3.target=java.lang.String\ randomString()
+comment4.params=
+comment4.target=java.lang.String\ randomSentence()
+comment5.params=
+comment5.target=double\ randomDouble()
+numComments=6

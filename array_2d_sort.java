@@ -33,7 +33,6 @@ public class array_2d_sort{
                             lc = y;
                         }
                     }
-
                 }
                 int temp = sortArray[i][j];
                 sortArray[i][j] = sortArray[lr][lc];

@@ -16,20 +16,20 @@ public class array_bubble_sort{
             System.out.print(sortArray[i] + "; ");
         }
         System.out.println(" ");
-        System.out.println(" ");
         for(int i = 0; i < sortArray.length; i++){
             for(int j = 0; j < sortArray.length - i - 1; j++){
                 if(sortArray[j] > sortArray[j+1]){
                     int temp = sortArray[j];
                     sortArray[j] = sortArray[j+1];
                     sortArray[j+1] = temp;
-                    for(int k = 0; k < sortArray.length; k++){
-                        System.out.print(sortArray[k] + "; ");
-                    }
-                    System.out.println(" ");
-                    System.out.println(" ");
+                    /**for(int k = 0; k < sortArray.length; k++){
+                    System.out.print(sortArray[k] + "; ");
+                    }**/
                 }
             }
+        }
+        for(int k = 0; k < sortArray.length; k++){
+            System.out.print(sortArray[k] + "; ");
         }
     }
 }

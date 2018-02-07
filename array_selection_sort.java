@@ -8,8 +8,9 @@ public class array_selection_sort{
         int[] sortArray = new int[n];
         for(int i = 0; i < sortArray.length; i++){
             System.out.print("Please enter number - ");
-            sortArray[i] = rand.nextInt(100);
+            sortArray[i] = in.nextInt();
             System.out.println(" ");
+            //System.out.println(sortArray[i]);
         }
         System.out.println(" ");
         System.out.println("Your array is - ");
@@ -18,7 +19,6 @@ public class array_selection_sort{
         }
         System.out.println(" ");
         System.out.println(" ");
-        System.out.println("INITIATE SWAP SEQUENCE");
         for(int i = 0; i < sortArray.length - 1; i++)
         {
             int large = i;
@@ -27,15 +27,15 @@ public class array_selection_sort{
                     large = j;
                 }
             }
-                int temp = sortArray[i];
-                sortArray[i] = sortArray[large];
-                sortArray[large] = temp;
-            }
-                for(int k = 0; k < sortArray.length; k++){
-                    System.out.print(sortArray[k] + "; ");
-                }
-                System.out.println(" ");
-                System.out.println(" ");
-            }
+            int temp = sortArray[i];
+            sortArray[i] = sortArray[large];
+            sortArray[large] = temp;
         }
-    
+        for(int k = 0; k < sortArray.length; k++){
+            System.out.print(sortArray[k] + "; ");
+        }
+        System.out.println(" ");
+        System.out.println(" ");
+    }
+}
+ 
