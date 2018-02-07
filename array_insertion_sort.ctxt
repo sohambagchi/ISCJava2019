@@ -1,5 +1,5 @@
 #BlueJ class context
-comment0.target=insertionSort
+comment0.target=array_insertion_sort
 comment1.params=args
 comment1.target=void\ main(java.lang.String[])
 numComments=2
