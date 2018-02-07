@@ -13,7 +13,7 @@ public class array_bubble_sort{
         System.out.println(" ");
         System.out.println("Your array is - ");
         for(int i = 0; i < sortArray.length; i++){
-            System.out.print(sortArray[i] + "; ");
+            System.out.print(sortArray[i] + "\t");
         }
         System.out.println(" ");
         for(int i = 0; i < sortArray.length; i++){
@@ -22,14 +22,12 @@ public class array_bubble_sort{
                     int temp = sortArray[j];
                     sortArray[j] = sortArray[j+1];
                     sortArray[j+1] = temp;
-                    /**for(int k = 0; k < sortArray.length; k++){
-                    System.out.print(sortArray[k] + "; ");
-                    }**/
                 }
             }
         }
+        System.out.println("Your sorted array is - ");
         for(int k = 0; k < sortArray.length; k++){
-            System.out.print(sortArray[k] + "; ");
+            System.out.print(sortArray[k] + "\t");
         }
     }
 }

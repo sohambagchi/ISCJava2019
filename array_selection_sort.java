@@ -9,21 +9,18 @@ public class array_selection_sort{
         for(int i = 0; i < sortArray.length; i++){
             System.out.print("Please enter number - ");
             sortArray[i] = in.nextInt();
-            System.out.println(" ");
-            //System.out.println(sortArray[i]);
         }
         System.out.println(" ");
         System.out.println("Your array is - ");
         for(int i = 0; i < sortArray.length; i++){
-            System.out.print(sortArray[i] + "; ");
+            System.out.print(sortArray[i] + "\t");
         }
         System.out.println(" ");
         System.out.println(" ");
-        for(int i = 0; i < sortArray.length - 1; i++)
-        {
+        for(int i = 0; i < sortArray.length - 1; i++){
             int large = i;
             for(int j = i + 1; j < sortArray.length; j++){
-                if(sortArray[large] < sortArray[j]){
+                if(sortArray[large] > sortArray[j]){
                     large = j;
                 }
             }
@@ -31,11 +28,9 @@ public class array_selection_sort{
             sortArray[i] = sortArray[large];
             sortArray[large] = temp;
         }
+        System.out.println("Your sorted array is - ");
         for(int k = 0; k < sortArray.length; k++){
-            System.out.print(sortArray[k] + "; ");
+            System.out.print(sortArray[k] + "\t");
         }
-        System.out.println(" ");
-        System.out.println(" ");
     }
 }
- 
