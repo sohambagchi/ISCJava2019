@@ -2,9 +2,11 @@ import java.util.Scanner;
 public class BinSearch{
     int arr[];
     int size;
+    static boolean sT;
     BinSearch(int size){
         arr = new int[size];
         this.size = size;
+        sT = false;
     }
     void input(Scanner input){
         for(int i = 0; i < size; i++){
@@ -27,6 +29,6 @@ public class BinSearch{
         bS.input(input);
         System.out.println("Please enter the term to be searched - ");
         int se = input.nextInt();
-        bS.input(
+        bS.binSearch(sT);
     }
 }
