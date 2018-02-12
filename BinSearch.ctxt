@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.target=BinSearch
+comment1.params=size
+comment1.target=BinSearch(int)
+comment2.params=input
+comment2.target=void\ input(java.util.Scanner)
+comment3.params=sS
+comment3.target=void\ binSearch(boolean)
+comment4.params=args
+comment4.target=void\ main(java.lang.String[])
+numComments=5
