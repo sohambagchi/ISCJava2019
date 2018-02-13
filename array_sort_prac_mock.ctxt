@@ -1,5 +1,5 @@
 #BlueJ class context
-comment0.target=array_sort
+comment0.target=array_sort_prac_mock
 comment1.params=arr
 comment1.target=int[][]\ input(int[][])
 comment2.params=args

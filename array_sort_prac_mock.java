@@ -1,5 +1,5 @@
 import java.util.*;
-public class array_sort{
+public class array_sort_prac_mock{
     public static int[][] input(int[][] arr){
         Scanner input = new Scanner(System.in);
         for(int i = 0; i < arr.length; i++){
@@ -15,7 +15,7 @@ public class array_sort{
         int m = in.nextInt();
         int n = in.nextInt(); 
         int[][] array = new int[m][n];
-        array = array_sort.input(array);
+        array = array_sort_prac_mock.input(array);
         for(int i = 0; i < array.length; i++){
             for(int j = 0; j < array[0].length; j++){
                 for(int k = 0; k < array[0].length - j - 1; k++){
