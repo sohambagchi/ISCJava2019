@@ -20,13 +20,13 @@ public class BinSearch{
         System.out.println(" ");
     }
 
-    void binSearch(int term){
+    void binSearch(int term, int[] arra){
         int low = 0;
-        int high = arr.length;
+        int high = arra.length;
         int m = high/2;
         while(low <= high){
-            if(arr[m] < term) low = m + 1;
-            else if(arr[m] > term) high = m - 1;
+            if(arra[m] < term) low = m + 1;
+            else if(arra[m] > term) high = m - 1;
             else sT = true; break;
         }
     }
@@ -54,7 +54,7 @@ public class BinSearch{
         bS.output(arr);
         System.out.println("Please enter the term to be searched - ");
         int se = input.nextInt();
-        bS.binSearch(se);
+        bS.binSearch(se, arr);
         if(sT) System.out.println("Search term " + se + " found!");
         else System.out.println("Search term not found");
     }
