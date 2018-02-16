@@ -23,9 +23,9 @@ public class BinSearch{
     void binSearch(int term, int[] arra){
         int low = 0;
         int high = arra.length;
-        int m = high/2;
         while(low <= high){
-            if(arra[m] < term) low = m + 1;
+            int m = (low + high)/2;
+            if(arra[m] > term) low = m + 1;
             else if(arra[m] > term) high = m - 1;
             else sT = true; break;
         }
@@ -55,6 +55,7 @@ public class BinSearch{
         System.out.println("Please enter the term to be searched - ");
         int se = input.nextInt();
         bS.binSearch(se, arr);
+        System.out.println(sT);
         if(sT) System.out.println("Search term " + se + " found!");
         else System.out.println("Search term not found");
     }
