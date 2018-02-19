@@ -5,14 +5,13 @@ public class stringLengths{
     Scanner input = new Scanner(System.in);
     stringLengths(){
         System.out.println("Please enter number of strings - ");
-        int n = Input.inputInt();
+        int n = input.nextInt();
         storage = new String[n];
         int longest = 1;
         for(int i = 0; i < storage.length; i++){
             System.out.print("Please enter String - "); storage[i] = input.nextLine();
             if(storage[i].length() > longest) longest = storage[i].length();
         }
-
         banner = new char[n][longest];
         for(int i = 0; i < storage.length; i++){
             for(int j = 0; j < storage[i].length(); j++){

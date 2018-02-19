@@ -38,12 +38,6 @@ public class array_2d_sort{
                 sortArray[i][j] = sortArray[lr][lc];
                 sortArray[lr][lc] = temp;
                 System.out.println(". ");
-                for(int p = 0; p < m; p++){
-                    for(int q = 0; q < n; q++){
-                        System.out.print(sortArray[p][q] + " ");
-                    }
-                    System.out.println(" ");
-                }
             }
         }
         System.out.println(" ");

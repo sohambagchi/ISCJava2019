@@ -15,4 +15,18 @@ public class Input{
         input.nextLine();
         return input.next().charAt(0);
     }
+    public static int[] inputArrayOne(int[] arr){
+        for(int i = 0; i < arr.length; i++){
+            arr[i] = input.nextInt();
+        }
+        return arr;
+    }
+    public static int[][] inputArrayTwo(int[][] arr){
+        for(int i = 0; i < arr.length; i++){
+            for(int j = 0; j < arr[0].length; j++){
+                arr[i][j] = input.nextInt();
+            }
+        }
+        return arr;
+    }
 }
