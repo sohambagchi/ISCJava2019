@@ -2,6 +2,7 @@ import java.util.*;
 public class array_selection_sort{
     public static void main(String[] args){
         Scanner in = new Scanner(System.in);
+        array_selection_sort Ass = new array_selection_sort();
         Random rand = new Random();
         System.out.println("Please enter number of terms - ");
         int n = in.nextInt();
@@ -16,21 +17,25 @@ public class array_selection_sort{
             System.out.print(sortArray[i] + "\t");
         }
         System.out.println(" ");
-        System.out.println(" ");
-        for(int i = 0; i < sortArray.length - 1; i++){
-            int large = i;
-            for(int j = i + 1; j < sortArray.length; j++){
-                if(sortArray[large] > sortArray[j]){
-                    large = j;
-                }
-            }
-            int temp = sortArray[i];
-            sortArray[i] = sortArray[large];
-            sortArray[large] = temp;
-        }
+        sortArray = Ass.aSs(sortArray);
         System.out.println("Your sorted array is - ");
         for(int k = 0; k < sortArray.length; k++){
             System.out.print(sortArray[k] + "\t");
         }
+    }
+
+    public static int[] aSs(int[] sArray){
+        for(int i = 0; i < sArray.length - 1; i++){
+            int large = i;
+            for(int j = i + 1; j < sArray.length; j++){
+                if(sArray[large] > sArray[j]){
+                    large = j;
+                }
+            }
+            int temp = sArray[i];
+            sArray[i] = sArray[large];
+            sArray[large] = temp;
+        }
+        return sArray;
     }
 }

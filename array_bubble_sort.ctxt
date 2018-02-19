@@ -2,4 +2,6 @@
 comment0.target=array_bubble_sort
 comment1.params=args
 comment1.target=void\ main(java.lang.String[])
-numComments=2
+comment2.params=sArray
+comment2.target=int[]\ aBs(int[])
+numComments=3
