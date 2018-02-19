@@ -9,16 +9,16 @@ public class array_linear_search{
             System.out.print("ARRAY [" + (i+1) + "] - ");
             array[i] = input.nextInt();
         }
-        array_binary_search aBs = new array_binary_search();
+        array_linear_search aLs = new array_linear_search();
         System.out.println("Your Array is: ");
-        aBs.output(array);
-        array = aBs.sort(array);
+        aLs.output(array);
+        array = aLs.sort(array);
         System.out.println("Your sorted array is: ");
-        aBs.output(array);
+        aLs.output(array);
         System.out.println(" ");
         System.out.print("Please enter the number to search for - ");
         int s = input.nextInt(); System.out.println(" ");
-        boolean sS = aBs.search(array, s);
+        boolean sS = aLs.search(array, s);
         if(sS) System.out.println("Search successful, " + s + " is found.");
         else System.out.println("Search failed");
     }
