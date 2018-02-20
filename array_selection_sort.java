@@ -2,7 +2,6 @@ import java.util.*;
 public class array_selection_sort{
     public static void main(String[] args){
         Scanner in = new Scanner(System.in);
-        array_selection_sort Ass = new array_selection_sort();
         Random rand = new Random();
         System.out.println("Please enter number of terms - ");
         int n = in.nextInt();
@@ -17,7 +16,7 @@ public class array_selection_sort{
             System.out.print(sortArray[i] + "\t");
         }
         System.out.println(" ");
-        sortArray = Ass.aSs(sortArray);
+        sortArray = array_selection_sort.aSs(sortArray);
         System.out.println("Your sorted array is - ");
         for(int k = 0; k < sortArray.length; k++){
             System.out.print(sortArray[k] + "\t");

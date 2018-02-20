@@ -23,8 +23,9 @@ public class array_bubble_sort{
             System.out.print(sortArray[k] + "\t");
         }
     }
+
     public static int[] aBs(int[] sArray){
-            for(int i = 0; i < sArray.length; i++){
+        for(int i = 0; i < sArray.length; i++){
             for(int j = 0; j < sArray.length - i - 1; j++){
                 if(sArray[j] > sArray[j+1]){
                     int temp = sArray[j];
