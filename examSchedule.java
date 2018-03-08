@@ -6,7 +6,7 @@ public class examSchedule{
     String subjects;
     String[] subjectsAdded;
     examSchedule(Scanner cons){
-        threeWeeks = new String[15][3];
+        threeWeeks = new String[15][4];
         for(int i = 0; i < 15; i += 5){
             threeWeeks[i][0] = "Monday";
             threeWeeks[i + 1][0] = "Tuesday";
@@ -17,10 +17,10 @@ public class examSchedule{
         subjects = "LANGUAGE LITERATURE";
         System.out.println("Please enter number of unique combinations - ");
         int n = cons.nextInt();
-        uniqueCombos = new String[n][6];
+        uniqueCombos = new String[n][7];
         for(int i = 0; i < uniqueCombos.length; i++){
-            uniqueCombos[i][0] = "LANGUAGE";
-            uniqueCombos[i][1] = "LITERATURE";
+            uniqueCombos[i][1] = "LANGUAGE";
+            uniqueCombos[i][2] = "LITERATURE";
         }
         for(int i = 0; i < threeWeeks.length; i++){
             for(int j = 0; j < threeWeeks[0].length; j++){
@@ -33,8 +33,8 @@ public class examSchedule{
 
     void createUniqueCombos(Scanner sub, examSchedule eV){
         for(int i = 0; i < uniqueCombos.length; i++){
-            for(int j = 2; j < uniqueCombos[0].length; j++){
-                System.out.println("Please enter COMBO " + (i) + " SUBJECT " + (j));
+            for(int j = 3; j < uniqueCombos[0].length; j++){
+                System.out.println("Please enter COMBO " + (i+1) + " SUBJECT " + (j));
                 String temp = sub.nextLine();
                 uniqueCombos[i][j] = temp.toUpperCase();
                 eV.addToSL(uniqueCombos[i][j]);
@@ -63,10 +63,48 @@ public class examSchedule{
     }
 
     void createSchedule(){
-        
+        for(int i = 0; i < threeWeeks.length; i++){
+            for(int j = 1; j < threeWeeks[0].length; j++){
+                for(int k = 0; k < subjectList.length; k++){
+                    if(checkAlreadyPlotted(subjectList[i]) == false){
+                        if(j > 1){
+                            if(checkCommonSubject(subjectList[i], i, j)){
+                                if(checkDateGap() == false){
+                                    threeWeeks[i][j] = subjectList[k];
+                                    
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
 
-    boolean checkCommonSubject(){
+    boolean checkAlreadyPlotted(String toC){
+        for(int i = 0; i < subjectsAdded.length; i++){
+            if(subjectsAdded[i].equals(toC)) return true;
+        }
+        return false;
+    }
+
+    boolean checkCommonSubject(String toC, int n, int m){
+        for(int i = 0; i < uniqueCombos.length; i++){
+            for(int j = 1; j < uniqueCombos[0].length; j++){
+                if(uniqueCombos[i][j].equals(toC)){
+                    for(int k = 1; k < uniqueCombos[0].length; k++){
+                        if(threeWeeks[n][1].equals(uniqueCombos[i][k])) return false;
+                        else if(threeWeeks[n][2].equals(uniqueCombos[i][k])) return false;
+                        else return true;
+                    }
+                }
+            }
+        }
+        return false;
+    }
+
+    boolean checkDateGap(){
+        
         return false;
     }
     
