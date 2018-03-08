@@ -63,9 +63,13 @@ public class examSchedule{
     }
 
     void createSchedule(){
-
+        
     }
 
+    boolean checkCommonSubject(){
+        return false;
+    }
+    
     void SLtoArray(){
         subjectList = subjects.split(" "); 
         subjectsAdded = new String[subjectList.length];
