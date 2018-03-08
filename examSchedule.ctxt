@@ -1,0 +1,15 @@
+#BlueJ class context
+comment0.target=examSchedule
+comment1.params=cons
+comment1.target=examSchedule(java.util.Scanner)
+comment2.params=sub\ eV
+comment2.target=void\ createUniqueCombos(java.util.Scanner,\ examSchedule)
+comment3.params=subA
+comment3.target=void\ addToSL(java.lang.String)
+comment4.params=
+comment4.target=void\ createSchedule()
+comment5.params=
+comment5.target=void\ SLtoArray()
+comment6.params=args
+comment6.target=void\ main(java.lang.String[])
+numComments=7
