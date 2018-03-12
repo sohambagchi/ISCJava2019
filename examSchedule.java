@@ -78,42 +78,47 @@ public class examSchedule{
     void createSchedule(examSchedule eV){
         int x = 0;
         for(int i = 0; i < threeWeeks.length; i++){
-            int j = 1;
             System.out.println("LANDMARK 1");
-            while(j < threeWeeks[0].length){
-                for(int k = 0; k < subjectList.length; k++){
+            for(int k = 0; k < subjectList.length; k++){
+                for(int j = 1; j < threeWeeks[0].length; j++){
                     if(checkAlreadyPlotted(subjectList[k]) == false){
-                        System.out.println("PASSED FIRST CONDITIONAL");
+                        System.out.println("PASSED FIRST CONDITIONAL; J = " + j + "; I = " + i + "; K = " + k);
                         if(j > 1){
-                            System.out.println("PASSED j > 1");
+                            System.out.println("PASSED j > 1; J = " + j + "; I = " + i + "; K = " + k);
                             if(checkCommonSubject(subjectList[k], i, j) == true){
+                                System.out.println("LANDMARK 7; J = " + j + "; I = " + i + "; K = " + k);
                                 if(eV.checkDateGap(subjectList[k]) < 1){
+                                    System.out.println("LANDMARK 6; J = " + j + "; I = " + i + "; K = " + k);
                                     threeWeeks[i][j] = subjectList[k];
                                     subjectsAdded[x] = subjectList[k];
                                     eV.dateGap(threeWeeks[i][j]);
                                     x += 1;
-                                    j+=1;
+                                    //j+=1;
                                     eV.printSchedule();
                                 }
                             }
+                            /*else{
+                                j+=1;
+                            }*/
                         }
                         else{
-                            System.out.println("PASSED j < 1");
+                            System.out.println("PASSED j < 1; J = " + j + "; I = " + i + "; K = " + k);
                             if(eV.checkDateGap(subjectList[k]) < 1){
+                                System.out.println("LANDMARK 5; J = " + j + "; I = " + i + "; K = " + k);
                                 threeWeeks[i][j] = subjectList[k];
                                 subjectsAdded[x] = subjectList[k];
                                 eV.dateGap(threeWeeks[i][j]);
                                 x += 1;
-                                j+=1;
+                                //j+=1;
                                 eV.printSchedule();
-
                             }
                         }
-                        System.out.println("LANDMARK 2");
+                        //if(j>=3) j = 1;
+                        System.out.println("LANDMARK 2; J = " + j + "; I = " + i + "; K = " + k);
                     }
-                    System.out.println("LANDMARK 3");
+                    System.out.println("LANDMARK 3; J = " + j + "; I = " + i + "; K = " + k);
                 }
-                System.out.println("LANDMARK 4");
+                System.out.println("LANDMARK 4; J = N.A.; I = " + i + "; K = " + k);
             }
             eV.datePassed();
         }
@@ -134,12 +139,21 @@ public class examSchedule{
     }
 
     boolean checkCommonSubject(String toC, int n, int m){
+        System.out.println("CCS");
         for(int i = 0; i < uniqueCombos.length; i++){
             for(int j = 0; j < uniqueCombos[0].length; j++){
+                System.out.println("COMPARING " + toC + " WITH " + uniqueCombos[i][j]);
                 if(uniqueCombos[i][j].equals(toC)){
+                    System.out.println("STUDENT" + (i+1) + "HAS THE SUBJECT " + toC);
                     for(int k = 0; k < uniqueCombos[0].length; k++){
-                        if(threeWeeks[n][1].equals(uniqueCombos[i][k])) return false;
-                        else if(threeWeeks[n][2].equals(uniqueCombos[i][k])) return false;
+                        if(threeWeeks[n][1].equals(uniqueCombos[i][k])){ 
+                            System.out.println(threeWeeks[n][1] + " (1) MATCHES " + uniqueCombos[i][k]);
+                            return false;
+                        }
+                        else if(threeWeeks[n][2].equals(uniqueCombos[i][k])){
+                            System.out.println(threeWeeks[n][2] + " (2) MATCHES " + uniqueCombos[i][k]);
+                            return false;
+                        }
                         else return true;
                     }
                 }
