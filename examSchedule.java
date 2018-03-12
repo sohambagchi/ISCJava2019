@@ -78,58 +78,37 @@ public class examSchedule{
     void createSchedule(examSchedule eV){
         int x = 0;
         for(int i = 0; i < threeWeeks.length; i++){
-            System.out.println("LANDMARK 1");
             for(int k = 0; k < subjectList.length; k++){
-                for(int j = 1; j < threeWeeks[0].length; j++){
-                    if(checkAlreadyPlotted(subjectList[k]) == false){
-                        System.out.println("PASSED FIRST CONDITIONAL; J = " + j + "; I = " + i + "; K = " + k);
-                        if(j > 1){
-                            System.out.println("PASSED j > 1; J = " + j + "; I = " + i + "; K = " + k);
-                            if(checkCommonSubject(subjectList[k], i, j) == true){
-                                System.out.println("LANDMARK 7; J = " + j + "; I = " + i + "; K = " + k);
-                                if(eV.checkDateGap(subjectList[k]) < 1){
-                                    System.out.println("LANDMARK 6; J = " + j + "; I = " + i + "; K = " + k);
+                if(eV.checkAlreadyPlotted(subjectList[k])){
+                    for(int j = 0; j < threeWeeks[0].length; j++){
+                        if(threeWeeks[i][j] == "-"){
+                            boolean c1 = eV.checkCommonSubject(subjectList[k], i );
+                            if(c1){
+                                int c2 = eV.checkDateGap(subjectList[k]);
+                                System.out.println(c2);
+                                if(c2 < 1){
                                     threeWeeks[i][j] = subjectList[k];
                                     subjectsAdded[x] = subjectList[k];
                                     eV.dateGap(threeWeeks[i][j]);
                                     x += 1;
-                                    //j+=1;
                                     eV.printSchedule();
                                 }
                             }
-                            /*else{
-                                j+=1;
-                            }*/
-                        }
-                        else{
-                            System.out.println("PASSED j < 1; J = " + j + "; I = " + i + "; K = " + k);
-                            if(eV.checkDateGap(subjectList[k]) < 1){
-                                System.out.println("LANDMARK 5; J = " + j + "; I = " + i + "; K = " + k);
-                                threeWeeks[i][j] = subjectList[k];
-                                subjectsAdded[x] = subjectList[k];
-                                eV.dateGap(threeWeeks[i][j]);
-                                x += 1;
-                                //j+=1;
-                                eV.printSchedule();
+                            else{
+
                             }
                         }
-                        //if(j>=3) j = 1;
-                        System.out.println("LANDMARK 2; J = " + j + "; I = " + i + "; K = " + k);
                     }
-                    System.out.println("LANDMARK 3; J = " + j + "; I = " + i + "; K = " + k);
                 }
-                System.out.println("LANDMARK 4; J = N.A.; I = " + i + "; K = " + k);
             }
-            eV.datePassed();
         }
-        eV.printSchedule();
     }
 
     boolean checkAlreadyPlotted(String toC){
         for(int i = 0; i < subjectsAdded.length; i++){
-            if(subjectsAdded[i].equals(toC)) return true;
+            if(subjectsAdded[i].equals(toC)) return false;
         }
-        return false;
+        return true;
     }
 
     void datePassed(){
@@ -138,7 +117,7 @@ public class examSchedule{
         }
     }
 
-    boolean checkCommonSubject(String toC, int n, int m){
+    boolean checkCommonSubject(String toC, int n){
         System.out.println("CCS");
         for(int i = 0; i < uniqueCombos.length; i++){
             for(int j = 0; j < uniqueCombos[0].length; j++){
