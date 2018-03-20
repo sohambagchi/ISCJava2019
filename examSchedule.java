@@ -45,8 +45,8 @@ public class examSchedule{
             }
         }
         eV.SLtoArray();
-        for(int i = subjectList.length - 1; i < 0; i--){
-            int index = rand.nextInt(i + 1);
+        for(int i = 0; i < subjectList.length; i++){
+            int index = rand.nextInt(subjectList.length);
             String temp = subjectList[i];
             subjectList[i] = subjectList[index];
             subjectList[index] = temp;
@@ -78,9 +78,10 @@ public class examSchedule{
     void createSchedule(examSchedule eV){
         int x = 0;
         for(int i = 0; i < threeWeeks.length; i++){
-            for(int k = 0; k < subjectList.length; k++){
-                if(eV.checkAlreadyPlotted(subjectList[k])){
-                    for(int j = 0; j < threeWeeks[0].length; j++){
+
+            for(int j = 0; j < threeWeeks[0].length; j++){
+                for(int k = 0; k < subjectList.length; k++){
+                    if(eV.checkAlreadyPlotted(subjectList[k])){
                         if(threeWeeks[i][j] == "-"){
                             boolean c1 = eV.checkCommonSubject(subjectList[k], i );
                             if(c1){
