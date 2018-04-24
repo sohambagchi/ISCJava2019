@@ -1,6 +1,6 @@
 import java.util.*;
 public class ThisClassTestsClasses{
-    public static void main(String[] args){
+  /**public static void main(String[] args){
         //Scanner input = new Scanner(System.in);
         /**System.out.println("1) All chars from x");
         System.out.println("2) All chars between x and y");
@@ -29,4 +29,4 @@ public class ThisClassTestsClasses{
         arrayOut.outTwo(arr1);
         **/
     }
-}
+
