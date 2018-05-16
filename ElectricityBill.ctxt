@@ -1,0 +1,15 @@
+#BlueJ class context
+comment0.target=ElectricityBill
+comment1.params=m\ ch\ p
+comment1.target=Meter(long,\ double,\ long)
+comment2.params=
+comment2.target=void\ readname()
+comment3.params=c\ mn\ mc\ pr
+comment3.target=ElectricityBill(long,\ long,\ double,\ long)
+comment4.params=
+comment4.target=double\ calculations()
+comment5.params=
+comment5.target=void\ dispBill()
+comment6.params=args
+comment6.target=void\ main(java.lang.String[])
+numComments=7
