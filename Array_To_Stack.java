@@ -42,7 +42,7 @@ public class Array_To_Stack{
         int x = in.nextInt();
         Array_To_Stack aTs = new Array_To_Stack(x);
         int choice = -999;
-        while(choice != 0){
+        do{
             System.out.println("1) Input");
             System.out.println("2) Pop It");
             System.out.println("3) Show 'em all");
@@ -52,5 +52,6 @@ public class Array_To_Stack{
             else if(choice == 2) aTs.popmarks();
             else aTs.display();
         }
+        while(choice != 0);
     }
 }
